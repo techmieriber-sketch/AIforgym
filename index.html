@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kom godt i gang med AI-undervisning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<style>
+		html, body { min-height: 100%; margin: 0; }
+		body { padding: 0; background: #000; }
+        body, button, input, select, textarea {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        }
+        .main-title {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+			font-size: clamp(1.5rem, 2.5vw + 0.5rem, 2.75rem);
+			line-height: 1.15;
+			margin: 0 1rem;
+			text-align: center;
+			color: #fff;
+			text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+			font-weight: 700;
+		}
+		.backdrop {
+			max-width: 1100px;
+			margin: 0 auto;
+			padding: 0;
+		}
+
+		/* Hero-sektion: billedet selv skaber højden (scroll kun over billedet) */
+		.hero { position: relative; }
+		.hero-img { width: 100%; height: auto; display: block; }
+		.hero::after {
+			content: "";
+			position: absolute; inset: 0;
+			background: linear-gradient(to bottom, rgba(0,0,0,0.00) 40%, rgba(0,0,0,0.35) 85%);
+			pointer-events: none;
+		}
+		.hero-content {
+			position: absolute; left: 50%; transform: translateX(-50%);
+			top: 1.25rem; width: calc(100% - 4rem); max-width: 1100px;
+			padding: 1rem 2rem; text-align: center;
+		}
+
+		@media (max-width: 900px) {
+			.hero-content { top: 1.25rem; }
+		}
+		@media (max-width: 520px) {
+			.hero-content { top: 1.25rem; }
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 1rem;
+			margin-top: 3rem;
+		}
+
+		.col { display: flex; flex-direction: column; align-items: stretch; row-gap: 1.75rem; }
+
+        .subheading {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+			font-size: clamp(1rem, 1vw + 0.75rem, 1.5rem);
+			line-height: 1.3;
+			margin: 0;
+			text-align: center;
+			color: #ffffff;
+			text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+			font-weight: 700;
+		}
+        .subheading a { color: inherit; text-decoration: none; }
+        .subheading a:hover, .subtext:hover { text-decoration: underline; }
+        .subheading a:focus-visible, .subtext:focus-visible { outline: 2px solid #fff; outline-offset: 2px; border-radius: 4px; }
+
+        .subtext {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+			font-size: clamp(0.9rem, 0.6vw + 0.6rem, 1.1rem);
+			line-height: 1.4;
+			margin: 0.25rem 0 0 0;
+			text-align: left;
+			align-self: flex-start;
+			color: #ffffff;
+			text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+			font-weight: 500;
+		}
+
+		.sublist {
+			margin: 0.35rem 0 0 1rem;
+			padding-left: 1.25rem;
+			list-style: disc;
+			list-style-position: outside;
+			color: #ffffff;
+			text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+			font-size: clamp(0.9rem, 0.5vw + 0.55rem, 1rem);
+			line-height: 1.4;
+			text-align: left;
+			align-self: flex-start;
+		}
+		.sublist li { margin: 0.6rem 0; }
+
+        .subsubheading {
+			margin: 0.5rem 0 0 0.5rem;
+			color: #ffffff;
+			text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+			font-size: clamp(1rem, 0.8vw + 0.7rem, 1.25rem);
+			font-weight: 700;
+			text-align: left;
+		}
+
+		@media (max-width: 900px) {
+			.grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+		}
+		@media (max-width: 520px) {
+			.grid { grid-template-columns: 1fr; }
+		}
+	</style>
+</head>
+<body>
+	<section class="hero" aria-label="Hero">
+		<img class="hero-img" src="77de22fe-6942-4431-98b0-6c26afaef0f7.png" alt="Baggrundsbillede for AI-undervisning">
+		<div class="hero-content">
+            <h1 class="main-title">Kom godt i gang med AI-undervisning</h1>
+			<div class="grid" aria-label="Underoverskrifter">
+				<div class="col">
+					<h2 class="subheading"><a href="https://m365.cloud.microsoft/chat/?fromCode=cmcv2&redirectId=6ECC8808F72B46C28596F2BE18A03E47&internalredirect=CCM&auth=2" target="_blank" rel="noopener">Copilot</a></h2>
+					<ul class="sublist">
+						<li><a class="subtext" href="Grundprompt til lette tekster og opgavegenerering.pdf" target="_blank" rel="noopener">Grundprompt til lette tekster<br>og opgavegenerering</a></li>
+					</ul>
+					<p class="subsubheading">Grundprompts til agenter</p>
+					<ul class="sublist" aria-label="Copilot relaterede emner">
+						<li><a class="subtext" href="https://drive.google.com/drive/folders/1UhX0DEy8ERLpxqo73JSKo9Jt9Ja9tqtE?usp=sharing" target="_blank" rel="noopener">Produktagent</a></li>
+						<li><a class="subtext" href="https://drive.google.com/drive/folders/1iqXPb8-QsVvhxAXL4JV9aOQR-824Wssh?usp=sharing" target="_blank" rel="noopener">Læringsspil</a></li>
+						<li><a class="subtext" href="https://drive.google.com/drive/folders/1aD27vKfhlkvX1i1Wz1oojwzsYuL9aFON?usp=sharing" target="_blank" rel="noopener">Mailagent</a></li>
+						<li><a class="subtext" href="https://drive.google.com/drive/folders/1N7SZSmcz86jiz6C20ro6Yo4tnA19xlWH?usp=drive_link" target="_blank" rel="noopener">Eksamensplan</a></li>
+					</ul>
+				</div>
+				<div class="col">
+					<h2 class="subheading"><a href="https://notebooklm.google/" target="_blank" rel="noopener">Notebook LM</a></h2>
+					<ul class="sublist">
+						<li><a class="subtext" href="Appelsiner af Tove Ditlevsen.pdf" target="_blank" rel="noopener">Novellen Appelsiner</a></li>
+						<li><a class="subtext" href="https://drive.google.com/drive/folders/1wc4bYDJUWomPs2kRcd-cqUqDDg9NANfB?usp=sharing" target="_blank" rel="noopener">Videopræsentation af novellen 'Appelsiner'</a></li>
+						<li><a class="subtext" href="https://drive.google.com/drive/folders/1o020oPuCNejI2T4plVyzOu1AkVcZS_c-?usp=sharing" target="_blank" rel="noopener">Podcast om novellen 'Appelsiner'</a></li>
+					</ul>
+				</div>
+				<div class="col">
+					<h2 class="subheading"><a href="https://gamma.app/signin?logout_success=true" target="_blank" rel="noopener">Gamma app</a></h2>
+					<ul class="sublist">
+						<li><a class="subtext" href="https://drive.google.com/drive/folders/1fCzx_8nmGx9PKeiaCXJrdvNwTW9OIzuU?usp=sharing" target="_blank" rel="noopener">Power Point-præsentation af novellen 'Appelsiner'</a></li>
+					</ul>
+				</div>
+				<div class="col">
+					<h2 class="subheading"><a href="https://b.socrative.com/login/teacher/" target="_blank" rel="noopener">Socrative</a></h2>
+					<ul class="sublist">
+						<li><a class="subtext" href="socrativeQuizTemplate.xlsx" target="_blank" rel="noopener">Quiz</a></li>
+						<li><a class="subtext" href="Prompt til Socrative-quiz.pdf" target="_blank" rel="noopener">Prompt til Socrative-quiz</a></li>
+						<li><a class="subtext" href="https://drive.google.com/drive/folders/1caXIuZGnK2jvKwfX63BIrvKS9puLak4u?usp=sharing" target="_blank" rel="noopener">Test</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
